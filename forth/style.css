@@ -1,0 +1,1308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.navbar {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 10px;
+  opacity: 0;
+  animation: slideNavLinks 0.5s forwards;
+}
+
+.navbar-brand {
+  margin: 0 10px;
+  opacity: 0;
+  animation: slideLeftToRight 0.5s forwards;
+}
+
+@keyframes slideNavLinks {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeftToRight {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 70px 10% 0;
+}
+
+
+
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 0;
+  animation: slideButton 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.home-content h3 span {
+  color: darkred;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 30px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: calc(0.2s * var);
+}
+
+.home-content p {
+  font-size: 20px;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.home-sci a {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  border: 2px solid darkred;
+  border-radius: 50%;
+  font-size: 20px;
+  color: red;
+  text-decoration: none;
+  padding: 10px;
+  opacity: 0;
+  transition: 0.3s;
+  animation: slideNavLinks 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--1));
+  margin: 30px 15px 30px 0;
+
+}
+
+.btn-box {
+  color: red;
+}
+
+.home-sci a:hover {
+  background: darkred;
+  color: black;
+  box-shadow: 0 0 20px darkred;
+}
+
+.btn-box {
+  display: inline-block;
+  background: pink;
+  padding: 20px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 17px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px rgba(255, 0, 89, 0.281), 0 0 25px rgba(255, 0, 119, 0.789);
+}
+
+.btn-box:hover {
+  box-shadow: 0 0 5px red, 0 0 25px #000, 0 0 50px #000, 0 0 100px #000,
+    0 0 200px #000;
+}
+
+.pic-container {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 100px #ff0000, 0 0 170px white, 0 0 190px #0000ff,
+    0 0 140px #00fff271;
+}
+
+.pic-container img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideButton {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.about-img img {
+  border-radius: 50%;
+  height: 390px;
+  width: 390px;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  margin-left: 15%;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 60px;
+}
+
+.about-text h2 span {
+  color: #081b08;
+}
+
+.about-text h4 {
+  font-size: 30px;
+  margin-left: 7%;
+}
+
+.btn {
+  display: inline-block;
+  background: black;
+  padding: 20px 28px;
+  margin-left: 6%;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 17px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px rgba(255, 0, 89, 0.281), 0 0 25px rgba(255, 0, 119, 0.789);
+  color: red;
+
+}
+.btn {
+  color: red;
+  background-color: red;
+}
+
+.btn:hover {
+   box-shadow: 0 0 5px red, 0 0 25px #000, 0 0 50px #000, 0 0 100px #000,
+    0 0 200px #000;
+}
+
+
+/* #services {
+  color:hsla(177, 54%, 7%, 0.76);
+
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+}
+.sub-title {
+  color:hsla(177, 54%, 7%, 0.76);
+
+  text-align: center;
+  font-size: 60px;
+  padding-bottom:70px ;
+}
+.sub-title span {
+  color: #0000ff
+}
+.service-list  {
+  display: flex;
+  flex-direction: column;
+text-align: center; 
+align-items: center;
+grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+grid-gap:40px;
+margin-top: 50px;
+}
+
+.service-list div {
+  background-color: transparent;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 13px;
+  border-right: 10px;
+  border-radius: 20px;
+  transition: background 0.5s transform 0.5s;
+  box-shadow: 1px 1px 40px #6e050547;
+  background-color: rgba(254, 230, 234, 0.967);
+}
+.service-list div i 
+{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.services-list div h2{
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1b080fb5;
+}
+.services-list div  a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.read {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b08;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0;
+  animation: slideTop is ease forwards;
+ animation-delay: 2s;
+ box-shadow: 0 0 5px rgb(64, 29, 29);
+}
+.read:hover{
+  background: rgb(209, 66, 90);
+  color: black;
+  box-shadow: 0 0 20px  rgb(66, 209, 202);
+} */
+
+
+/* Apply styles to the services section */
+.services {
+  /* background-color: rgb(241, 170, 182); Background color for the services section */
+  padding: 100px 0px;
+  width: 100%;
+  /* Adjust the top and bottom padding as needed */
+}
+
+.container {
+  max-width: 1200px;
+  /* Limit the width of the content container */
+  margin: 0 auto;
+  /* Center the container horizontally */
+  padding: 0 20px;
+  /* Add some padding on the sides of the container */
+}
+
+.sub-title {
+  text-align: center;
+  /* Center-align the sub-title */
+  font-size: 36px;
+  /* Adjust the font size as needed */
+  margin-bottom: 40px;
+  /* Add some space below the sub-title */
+  color: #333;
+  /* Text color for the sub-title */
+  margin-top: 30px;
+}
+
+/* Style individual service items within the service-list */
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow services to wrap to the next row if there's not enough space */
+  justify-content: space-between;
+  /* Center-align the services horizontally */
+}
+
+.service-list div {
+  flex: 0 1 calc(33.33% - 20px);
+  /* Set the width of each service div to one-third (minus margin) */
+  background-color: #fff;
+  /* Background color for each service item */
+  padding: 20px;
+  /* Add padding around each service item */
+  margin-right: 20px;
+  /* Add some space between service items (margin-right) */
+  border-radius: 10px;
+  /* Add rounded corners to service items */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Add a subtle box shadow */
+  text-align: center;
+  /* Center-align the content within service items */
+}
+
+.service-list div i {
+  font-size: 36px;
+  /* Adjust the icon size as needed */
+  color: #fc4646;
+  /* Color for the icons */
+}
+
+.service-list div h2 {
+  font-size: 24px;
+  /* Adjust the title font size as needed */
+  margin-top: 20px;
+  /* Add space above the title */
+  color: #333;
+  /* Text color for the title */
+}
+
+.service-list div p {
+  font-size: 16px;
+  /* Adjust the font size for service descriptions */
+  margin-top: 10px;
+  /* Add space above the description */
+  color: #666666f3;
+  /*Text color for descriptions*/
+}
+
+.service-list div a.read {
+  display: inline-block;
+  padding: 10px 20px;
+  /* Adjust padding as needed */
+  margin-top: 20px;
+  /* Add space above the "Learn More" link */
+  background-color: #fc4646;
+  /* Background color for the link */
+  color: #fff;
+  /* Text color for the link */
+  text-decoration: none;
+  border-radius: 8px;
+  /* Add rounded corners to the link */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color */
+}
+
+.service-list div a.read:hover {
+  background-color: #d62739;
+  /* Background color on hover */
+}
+
+.service-list div:hover {
+  transform: translate(-10px);
+}
+
+.read {
+  display: inline-block;
+  background: black;
+  padding: 20px 28px;
+  margin-left: 6%;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 17px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.4s;
+  box-shadow: 0 0 5px rgba(255, 0, 89, 0.281), 0 0 25px rgba(255, 0, 119, 0.789);
+
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container1 {
+  width: 600px;
+  height: 500px;
+  padding: 75px 120px;
+  margin-left: 120px;
+}
+
+.heading1 {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 50px;
+}
+
+.bar {
+  font-size: 23px;
+}
+
+.technical-bars .barss {
+  margin-top: 40px 0;
+}
+
+.technical-bars .bars:first-child {
+  margin-top: 0;
+}
+
+.technical-bars .bars:last-child {
+  margin-bottom: 0;
+}
+
+.technical-bars .bars .info {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+.bar .info .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #000000;
+  animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.bar .info .progress-line span {
+  height: 100%;
+  background-color: #0ef;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+
+.progress-line {
+  position: relative;
+  border-radius: 10px;
+  margin: 20px 0px;
+  width: 100%;
+  height: 5px;
+  background-color: #000000;
+  transform-origin: left;
+  animation: animateBlackLine 1s ease-in-out forwards;
+
+}
+
+@keyframes animateBlackLine {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.heading1 {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 20px;
+  /* Adjust margin as needed */
+}
+
+.bar {
+  font-size: 23px;
+  position: relative;
+  /* Make sure the lines are relative to the bars */
+  margin-bottom: 20px;
+  /* Adjust margin as needed */
+}
+
+.info {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #000000;
+  /* Line color */
+  transform-origin: left;
+  margin-top: 10px;
+  /* Adjust margin as needed */
+}
+
+.progress-line span {
+  height: 100%;
+  background-color: #0ef;
+  /* Fill color for the skill bars */
+  position: absolute;
+  border-radius: 10px;
+}
+
+.progress-line.html span {
+  background-color: brown;
+  /* HTML color */
+  width: 90%;
+}
+
+.progress-line.css3 span {
+  background-color: #147bb1;
+  /* CSS color */
+  width: 60%;
+}
+
+.progress-line.javascript span {
+  background-color: #bdbc1e;
+  /* JavaScript color */
+  width: 85%;
+}
+
+.progress-line.python span {
+  background-color: #c32ec9;
+  /* Python color */
+  width: 75%;
+}
+
+.progress-line.react span {
+  background-color: #239494;
+  /* React color */
+  width: 50%;
+}
+
+.radial-bars {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+}
+
+.radial-bars .radial-bar {
+  width: 50%;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.radial-bars .radial-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 120px;
+  height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar {
+  stroke-width: 10;
+  stop-color: #000;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+
+.path {
+  stroke-width: 10;
+  stroke: red;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+
+.min-text {
+
+  text-align: center;
+}
+
+.min-text h2 {
+  font-size: 60px;
+  line-height: 1;
+}
+
+.min-text h2 span {
+  color: rgb(145, 51, 51);
+}
+
+.portfolio-content {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.row {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  /* Allow images to determine their own width */
+  margin-right: 10px;
+  transition: transform 0.5s;
+}
+
+.row:last-child {
+  margin-right: 0;
+}
+
+.row img {
+  width: 100%;
+  max-width: 350px;
+  /* Limit the maximum width of images */
+  border-radius: 8px;
+  display: block;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  transition: height 0.5s;
+  opacity: 0;
+}
+
+.row:hover img {
+  transform: scale(1.1);
+}
+
+.row:hover .layer {
+  height: 100%;
+  /* Show the text on hover */
+  opacity: 1;
+}
+
+.layer h5 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.layer p {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.0;
+}
+
+.layer i {
+  color: #fc4646;
+  margin-top: 20px;
+  font-size: 20px;
+  background: #b6afaf;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.row img {
+  height: 400px;
+  /* Set the desired height for the images */
+  max-width: 100%;
+  /* Ensure images don't exceed their container */
+  max-height: 100%;
+  /* Ensure images don't exceed their container */
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.portfolio-content {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  /* Add some gap between images */
+}
+
+.row {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  /* Allow images to determine their own width */
+  transition: transform 0.5s;
+  margin-right: 20px;
+  /* Increase the margin between images */
+}
+
+.row:last-child {
+  margin-right: 0;
+}
+
+.row img {
+  width: 590px;
+  /* Increase the width of the images */
+  height: auto;
+  /* Let the height adjust to maintain the aspect ratio */
+  border-radius: 8px;
+  display: block;
+}
+
+/* 
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3rem;
+  padding-left: 30px;
+  margin-top: 130px;
+}
+
+.contact-text h2 {
+  font-size: 90px;
+  line-height: 1;
+  text-align: center;
+}
+
+.contact-text h2 span {
+  color: red;
+}
+
+.contact-text h4 {
+  margin: 15px 0;
+  color: rgba(228, 228 228);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact-text p {
+  color: rgba(177, 177, 177);
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 2rem;
+}
+
+.contact-list {
+  margin-bottom: 3rem;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contact-list i {
+  display: inline-block;
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all .40s ease;
+}
+
+.contact-list li a:hover {
+  transform: scale(1.01) translateY(-5px);
+  color: red;
+
+}
+
+.contact-icons i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid red;
+  border-radius: 50%;
+  font-size: 20px;
+  color: red;
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  transition: -5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+
+}
+
+.contact-icons i:hover {
+  background-color: red;
+  color: #000;
+  box-shadow: 0 0 20px red;
+
+}
+
+.contact-form form {
+  position: relative;
+}
+
+.contact-form form input form textarea {
+  border: none;
+  outline: none;
+  width: 90%;
+  padding: 18px;
+  color: #000;
+  background: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+
+
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 220px;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3rem;
+  padding-left: 30px;
+  margin-top: 130px;
+}
+
+.contact-text h2 {
+  font-size: 90px;
+  line-height: 1;
+  text-align: center;
+}
+
+.contact-text h2 span {
+  color: red;
+}
+
+.contact-text h4 {
+  margin: 15px 0;
+  color: rgba(228, 228 228);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact-text p {
+  color: rgba(177, 177, 177);
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 2rem;
+}
+
+.contact-list {
+  margin-bottom: 3rem;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contact-list i {
+  display: inline-block;
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all .40s ease;
+}
+
+.contact-list li a:hover {
+  transform: scale(1.01) translateY(-5px);
+  color: red;
+}
+
+.contact-icons i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid red;
+  border-radius: 50%;
+  font-size: 20px;
+  color: red;
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  transition: -5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(.2s * var(--1));
+}
+
+.contact-icons i:hover {
+  background-color: red;
+  color: #000;
+  box-shadow: 0 0 20px red;
+}
+
+.contact-form form {
+  position: relative;
+}
+
+.contact-form form input form textarea {
+  border: none;
+  outline: none;
+  width: 90%;
+  padding: 18px;
+  color: #000;
+  background: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 220px;
+}
+
+.contact-form form .send {
+  display: inline-block;
+  padding: 14px 60px;
+  border-radius: 40px;
+  font-size: 18px;
+  color: #081b08;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0;
+  background: red;
+  animation: slideTop 1s ease forwards;
+animation-delay: 2s;
+  box-shadow: 0 0 5px rgb(64, 29, 29);
+}
+
+.contact-form form .send:hover {
+  background: rgb(209, 66, 90);
+  color: black;
+  box-shadow: 0 0 20px rgb(66, 209, 202);
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+
+
+
+
+.contact {
+  /* background-image: url('https://i.ibb.co/9ss0cVk/contact-bg.jpg'); Replace with the actual image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-info {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.contact-info h2 {
+  font-size: 36px;
+}
+
+.contact-info h4 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  padding-right: 20px;
+  text-align: left;
+
+  /* Set the width of each service div to one-third (minus margin) */
+  background-color: #3d3c3c;
+  /* Background color for each service item */
+  padding: 20px;
+  /* Add padding around each service item */
+  margin-right: 20px;
+  /* Add some space between service items (margin-right) */
+  border-radius: 10px;
+  /* Add rounded corners to service items */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Add a subtle box shadow */
+  text-align: center;
+  /* Center-align the content within service items */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form .send {
+  background-color: red;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form .send:hover {
+  background-color: #000;
+}
+
+
+
+/* Add this CSS to your existing styles.css */
+
+.contact {
+  background-color: rgb(34, 34, 34);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* padding: 100px 0; */
+  text-align: center;
+  color: #fff;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  /* padding: 20px; */
+}
+
+.contact-info span {
+  flex: 1;
+  text-align: left;
+  margin: 0 0;
+}
+
+.contact-info h2 {
+  font-size: 36px;
+  /* text-align: center;
+  justify-content: center;
+  align-items: center; */
+  padding-right: 140px;
+}
+
+.contact-info h4 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-right: 78%px;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+}
+
+.contact-info p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  text-align: right; 
+  padding-right: 20px;
+  margin-left: 10%;
+  font-size: 15px;
+  width: 50%;
+
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="subject"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form .send {
+  background-color: red;
+  color: #fff;
+  /* padding: 10px 20px; */
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form .send:hover {
+  background-color: #000;
+}
+
+
+.contact-icons {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 50%;
+  font-size: 60px;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+
+}
+
+
+
+
+
+
